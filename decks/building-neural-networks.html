@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Slide viewer for the Building Neural Networks for Deep Learning Applications workshop."
+    >
+    <title>Slide Deck | Building Neural Networks</title>
+    <link rel="stylesheet" href="../assets/styles.css?v=20260828f">
+  </head>
+  <body class="docs-page">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="Building Neural Networks home">
+        <span class="brand-mark" aria-hidden="true">NN</span>
+        <span>
+          <strong>Building Neural Networks</strong>
+          <small>USC CARC Workshop</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#overview">Overview</a>
+        <a href="../index.html#modules">Modules</a>
+        <a href="#slides">Slides</a>
+        <a href="../index.html#lab">Lab</a>
+        <a href="../index.html#materials">Materials</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="doc-hero" aria-labelledby="doc-title">
+        <a class="breadcrumb" href="../index.html">Home</a>
+        <p class="eyebrow">Slide Deck</p>
+        <h1 id="doc-title">Building Neural Networks Slide Deck</h1>
+        <p class="doc-intro">
+          Browse the workshop slides in a fixed viewer. Use the resource links
+          above to download the PDF, PowerPoint, or notebook.
+        </p>
+        <div class="deck-actions" aria-label="Deck resources">
+          <a class="button on-light primary" href="../assets/materials/building-neural-networks-workshop.pdf">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" />
+            </svg>
+            PDF
+          </a>
+          <a class="button on-light" href="../assets/materials/building-neural-networks-workshop.pptx">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" />
+            </svg>
+            PowerPoint
+          </a>
+          <a class="button on-light" href="../assets/materials/ANN.ipynb">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M8 4h8l4 4v12H4V4h4Zm8 0v5h4" />
+            </svg>
+            Notebook
+          </a>
+        </div>
+      </section>
+
+      <section class="deck-summary" aria-labelledby="deck-summary-title">
+        <div class="section-heading">
+          <p class="eyebrow">At A Glance</p>
+          <h2 id="deck-summary-title">What this deck covers</h2>
+        </div>
+        <div class="snapshot-grid">
+          <article>
+            <span class="metric">1-5</span>
+            <span class="metric-label">deep-learning context</span>
+          </article>
+          <article>
+            <span class="metric">6-14</span>
+            <span class="metric-label">network mechanics</span>
+          </article>
+          <article>
+            <span class="metric">15-18</span>
+            <span class="metric-label">applications and workflows</span>
+          </article>
+          <article>
+            <span class="metric">19-33</span>
+            <span class="metric-label">PyTorch lab</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="deck-shell" id="slides" aria-labelledby="slides-title">
+        <aside class="deck-toc" aria-label="Slide table of contents">
+          <p class="toc-title">Slides</p>
+          <ol class="toc-list">
+            <li><a href="#slide-01">Title</a></li>
+            <li><a href="#slide-02">Content</a></li>
+            <li><a href="#slide-03">Deep Learning</a></li>
+            <li><a href="#slide-04">Drivers</a></li>
+            <li><a href="#slide-05">Transition</a></li>
+            <li><a href="#slide-06">Neurons</a></li>
+            <li><a href="#slide-07">Layers</a></li>
+            <li><a href="#slide-08">Fashion-MNIST</a></li>
+            <li><a href="#slide-09">Logits</a></li>
+            <li><a href="#slide-10">Weights</a></li>
+            <li><a href="#slide-11">Activations</a></li>
+            <li><a href="#slide-12">Second Layer</a></li>
+            <li><a href="#slide-13">Training Steps</a></li>
+            <li><a href="#slide-14">Pipeline</a></li>
+            <li><a href="#slide-15">Applications</a></li>
+            <li><a href="#slide-16">Packages</a></li>
+            <li><a href="#slide-17">Tensors</a></li>
+            <li><a href="#slide-18">Workflow</a></li>
+            <li><a href="#slide-19">Lab Task</a></li>
+            <li><a href="#slide-20">Setup</a></li>
+            <li><a href="#slide-21">OnDemand</a></li>
+            <li><a href="#slide-22">Data APIs</a></li>
+            <li><a href="#slide-23">Imports</a></li>
+            <li><a href="#slide-24">Datasets</a></li>
+            <li><a href="#slide-25">DataLoader</a></li>
+            <li><a href="#slide-26">Model</a></li>
+            <li><a href="#slide-27">Optimizer</a></li>
+            <li><a href="#slide-28">Train Function</a></li>
+            <li><a href="#slide-29">Test Function</a></li>
+            <li><a href="#slide-30">Epochs</a></li>
+            <li><a href="#slide-31">Save</a></li>
+            <li><a href="#slide-32">Load</a></li>
+            <li><a href="#slide-33">Predict</a></li>
+          </ol>
+        </aside>
+
+        <div class="slide-docs">
+          <div class="section-heading slide-doc-heading">
+            <p class="eyebrow">Slides</p>
+            <h2 id="slides-title">Slide viewer</h2>
+          </div>
+
+          <div class="deck-viewer-toolbar" aria-label="Slide navigation">
+            <button class="deck-arrow" type="button" data-slide-prev aria-label="Previous slide">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="deck-viewer-status" aria-live="polite">
+              <span data-slide-status>Slide 01 of 33</span>
+              <strong data-slide-title>Introduction to Artificial Neural Networks</strong>
+            </div>
+            <button class="deck-arrow" type="button" data-slide-next aria-label="Next slide">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+
+          <article class="slide-doc slide-only" id="slide-01" data-slide-title="Introduction to Artificial Neural Networks">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-01.png" alt="Slide 1: Introduction to Artificial Neural Networks." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-02" data-slide-title="Workshop Content">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-02.png" alt="Slide 2: Content outline." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-03" data-slide-title="Deep Learning In Context">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-03.png" alt="Slide 3: Introduction to deep learning and common applications." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-04" data-slide-title="Why Deep Learning Grew Quickly">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-04.png" alt="Slide 4: Recent drivers of deep learning." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-05" data-slide-title="Transition To Neural Networks">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-05.png" alt="Slide 5: Introduction to deep learning transition visual." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-06" data-slide-title="Biological And Artificial Neurons">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-06.png" alt="Slide 6: Biological neuron and artificial neural network comparison." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-07" data-slide-title="Input, Hidden, And Output Layers">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-07.png" alt="Slide 7: Input, hidden, and output layers." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-08" data-slide-title="Fashion-MNIST Classification Task">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-08.png" alt="Slide 8: Fashion-MNIST classification task." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-09" data-slide-title="Inputs And Logits">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-09.png" alt="Slide 9: Input shape and logits." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-10" data-slide-title="Weights, Bias, And ReLU">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-10.png" alt="Slide 10: Weighted sum and ReLU activation example." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-11" data-slide-title="Activation Calculation Review">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-11.png" alt="Slide 11: Activation calculation review." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-12" data-slide-title="Moving Activations Forward">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-12.png" alt="Slide 12: Second-layer weighted sum and activation." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-13" data-slide-title="Three Training Steps">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-13.png" alt="Slide 13: Three steps to training a neural network." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-14" data-slide-title="Training Pipeline">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-14.png" alt="Slide 14: Training pipeline." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-15" data-slide-title="Deep Learning Applications">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-15.png" alt="Slide 15: Deep learning applications." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-16" data-slide-title="Neural-Network Packages">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-16.png" alt="Slide 16: Neural network packages from Facebook and Google." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-17" data-slide-title="PyTorch Tensors">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-17.png" alt="Slide 17: PyTorch tensors." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-18" data-slide-title="PyTorch Workflow">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-18.png" alt="Slide 18: PyTorch machine-learning workflow." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-19" data-slide-title="Lab Task Restated">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-19.png" alt="Slide 19: Fashion-MNIST PyTorch tutorial task." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-20" data-slide-title="Anaconda And Jupyter Setup">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-20.png" alt="Slide 20: Anaconda and Jupyter Kernel setup." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-21" data-slide-title="CARC OnDemand">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-21.png" alt="Slide 21: CARC OnDemand." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-22" data-slide-title="Working With Data">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-22.png" alt="Slide 22: TorchVision datasets and DataLoader." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-23" data-slide-title="Import Required Modules">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-23.png" alt="Slide 23: Importing modules for training and test datasets." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-24" data-slide-title="Define Training And Test Datasets">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-24.png" alt="Slide 24: Defining training and test datasets." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-25" data-slide-title="Define DataLoaders">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-25.png" alt="Slide 25: Defining DataLoader." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-26" data-slide-title="Create The Model">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-26.png" alt="Slide 26: Creating neural network models and checking GPU availability." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-27" data-slide-title="Choose Loss And Optimizer">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-27.png" alt="Slide 27: Optimizing model parameters." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-28" data-slide-title="Define The Training Function">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-28.png" alt="Slide 28: Defining training loop." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-29" data-slide-title="Evaluate On Test Data">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-29.png" alt="Slide 29: Defining test dataset or test function." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-30" data-slide-title="Run The Epoch Loop">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-30.png" alt="Slide 30: Training loop over epochs." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-31" data-slide-title="Save Model Weights">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-31.png" alt="Slide 31: Saving models." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-32" data-slide-title="Load Model Weights">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-32.png" alt="Slide 32: Loading models." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+
+          <article class="slide-doc slide-only" id="slide-33" data-slide-title="Make A Prediction">
+            <figure class="slide-visual">
+              <img src="../assets/slides/building-neural-networks/slide-33.png" alt="Slide 33: Making predictions." loading="lazy" width="1600" height="900">
+            </figure>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Building Neural Networks for Deep Learning Applications</p>
+      <p>USC Center for Advanced Research Computing</p>
+    </footer>
+
+    <script src="../assets/site.js?v=20260828f"></script>
+  </body>
+</html>

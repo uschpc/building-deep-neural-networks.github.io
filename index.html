@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Workshop site for Building Neural Networks for Deep Learning Applications, adapted from USC CARC course materials."
+    >
+    <title>Building Neural Networks</title>
+    <link rel="stylesheet" href="assets/styles.css?v=20260828f">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Building Neural Networks home">
+        <span class="brand-mark" aria-hidden="true">NN</span>
+        <span>
+          <strong>Building Neural Networks</strong>
+          <small>USC CARC Workshop</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#modules">Modules</a>
+        <a href="#deck">Deck</a>
+        <a href="#lab">Lab</a>
+        <a href="#setup">Setup</a>
+        <a href="#materials">Materials</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">USC Center for Advanced Research Computing</p>
+          <h1 id="hero-title">Building Neural Networks for Deep Learning Applications</h1>
+          <p class="hero-copy">
+            A practical workshop path from deep-learning concepts to a PyTorch model
+            trained on Fashion-MNIST.
+          </p>
+          <div class="hero-actions" aria-label="Primary material links">
+            <a class="button primary" href="assets/materials/building-neural-networks-workshop.pdf">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" />
+              </svg>
+              Slides PDF
+            </a>
+            <a class="button" href="assets/materials/ANN.ipynb">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M8 4h8l4 4v12H4V4h4Zm8 0v5h4" />
+              </svg>
+              Notebook
+            </a>
+            <a class="button" href="#deck">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 5h16M4 12h16M4 19h10" />
+              </svg>
+              Deck
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Workshop preview">
+          <div class="hero-preview-card">
+            <div class="hero-preview-meta">
+              <span>PyTorch workflow</span>
+              <span>Slide 18 / 33</span>
+            </div>
+            <img
+              class="hero-image"
+              src="assets/previews/slide-18.png"
+              alt="Workshop slide showing the PyTorch machine-learning workflow."
+              width="1867"
+              height="1050"
+            >
+          </div>
+          <div class="hero-preview-points" aria-label="Workshop milestones">
+            <span>Concepts</span>
+            <span>Training</span>
+            <span>Inference</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-deck-section" id="deck" aria-labelledby="home-deck-title">
+        <div class="section-heading">
+          <p class="eyebrow">Slide Deck</p>
+          <h2 id="home-deck-title">Building Neural Networks deck</h2>
+        </div>
+        <article class="home-deck-viewer">
+          <div class="deck-viewer-toolbar home-deck-toolbar" aria-label="Homepage slide navigation">
+            <button class="deck-arrow" type="button" data-home-deck-prev aria-label="Previous slide">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <div class="deck-viewer-status" aria-live="polite">
+              <span data-home-deck-status>Slide 01 of 33</span>
+              <strong data-home-deck-title>Introduction to Artificial Neural Networks</strong>
+            </div>
+            <button class="deck-arrow" type="button" data-home-deck-next aria-label="Next slide">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+          <figure class="home-deck-frame">
+            <img
+              src="assets/slides/building-neural-networks/slide-01.png"
+              alt="Slide 1: Introduction to Artificial Neural Networks."
+              loading="lazy"
+              width="1600"
+              height="900"
+              data-home-deck-image
+              data-slide-base="assets/slides/building-neural-networks"
+            >
+          </figure>
+          <div class="home-deck-notes" data-home-deck-notes>
+            <p class="slide-kicker" data-home-deck-kicker>Slide 01</p>
+            <h3 data-home-deck-note-title>Introduction to Artificial Neural Networks</h3>
+            <p data-home-deck-summary>
+              Opens the workshop and frames the session as a practical
+              introduction to neural networks for deep-learning applications.
+            </p>
+            <ul data-home-deck-points>
+              <li>Presenter: Hao Ji, Data Scientist at USC CARC.</li>
+              <li>Set expectations: concepts first, then PyTorch practice.</li>
+              <li>Good moment to ask learners about prior Python, GPU, or machine-learning experience.</li>
+            </ul>
+          </div>
+          <div class="home-deck-links">
+            <span>33 slides with notes</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="snapshot" id="overview" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="eyebrow">Workshop Map</p>
+          <h2 id="overview-title">From intuition to runnable model</h2>
+        </div>
+        <div class="snapshot-grid">
+          <article>
+            <span class="metric">33</span>
+            <span class="metric-label">slides</span>
+          </article>
+          <article>
+            <span class="metric">4</span>
+            <span class="metric-label">sections</span>
+          </article>
+          <article>
+            <span class="metric">28 x 28</span>
+            <span class="metric-label">Fashion-MNIST images</span>
+          </article>
+          <article>
+            <span class="metric">PyTorch</span>
+            <span class="metric-label">hands-on framework</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="module-section" id="modules" aria-labelledby="modules-title">
+        <div class="section-heading">
+          <p class="eyebrow">Sections</p>
+          <h2 id="modules-title">Course modules</h2>
+        </div>
+        <div class="module-grid">
+          <article class="module-card">
+            <p class="module-number">01</p>
+            <h3>Introduction to Deep Learning</h3>
+            <p>
+              Deep learning as a machine-learning subfield, inspired by artificial
+              neural networks and accelerated by data, storage, and GPUs.
+            </p>
+            <ul>
+              <li>Computer vision</li>
+              <li>Text generation</li>
+              <li>Speech recognition</li>
+              <li>Game-playing systems</li>
+            </ul>
+          </article>
+          <article class="module-card">
+            <p class="module-number">02</p>
+            <h3>Neural Networks</h3>
+            <p>
+              Input, hidden, and output layers, forward propagation, cost
+              calculation, backpropagation, and the training pipeline.
+            </p>
+            <ul>
+              <li>Layer structure</li>
+              <li>Weights and activations</li>
+              <li>Loss and optimization</li>
+              <li>Training feedback loop</li>
+            </ul>
+          </article>
+          <article class="module-card">
+            <p class="module-number">03</p>
+            <h3>Applications and Packages</h3>
+            <p>
+              A quick pass through common deep-learning applications and the
+              packages used in production and research workflows.
+            </p>
+            <ul>
+              <li>Vision tasks</li>
+              <li>Language tasks</li>
+              <li>TensorFlow</li>
+              <li>PyTorch</li>
+            </ul>
+          </article>
+          <article class="module-card">
+            <p class="module-number">04</p>
+            <h3>Building with PyTorch</h3>
+            <p>
+              A full Fashion-MNIST workflow: load data, define a model, train,
+              evaluate, save, reload, and make predictions.
+            </p>
+            <ul>
+              <li>Tensors and datasets</li>
+              <li>DataLoader batches</li>
+              <li>Model class</li>
+              <li>Inference</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="lab-section" id="lab" aria-labelledby="lab-title">
+        <div class="section-heading">
+          <p class="eyebrow">Notebook</p>
+          <h2 id="lab-title">Fashion-MNIST lab path</h2>
+        </div>
+        <div class="lab-layout">
+          <div class="lab-tabs" role="tablist" aria-label="Notebook sections">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="panel-data" id="tab-data" data-panel="panel-data">
+              Data
+            </button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-model" id="tab-model" data-panel="panel-model">
+              Model
+            </button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-train" id="tab-train" data-panel="panel-train">
+              Train
+            </button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="panel-predict" id="tab-predict" data-panel="panel-predict">
+              Predict
+            </button>
+          </div>
+
+          <article class="lab-panel active" role="tabpanel" tabindex="0" id="panel-data" aria-labelledby="tab-data">
+            <h3>Load data with Dataset and DataLoader</h3>
+            <p>
+              The notebook uses TorchVision to download Fashion-MNIST, transforms
+              image samples into tensors, then batches them with DataLoader.
+            </p>
+            <pre><code>from torchvision import datasets
+from torchvision.transforms import ToTensor
+from torch.utils.data import DataLoader
+
+training_data = datasets.FashionMNIST(
+    root="data",
+    train=True,
+    download=True,
+    transform=ToTensor(),
+)
+
+test_data = datasets.FashionMNIST(
+    root="data",
+    train=False,
+    download=True,
+    transform=ToTensor(),
+)
+
+train_dataloader = DataLoader(training_data, batch_size=64)
+test_dataloader = DataLoader(test_data, batch_size=64)</code></pre>
+          </article>
+
+          <article class="lab-panel" role="tabpanel" tabindex="0" id="panel-model" aria-labelledby="tab-model" hidden>
+            <h3>Define the neural network</h3>
+            <p>
+              The model flattens each 28 x 28 image and sends it through two
+              ReLU hidden layers before producing ten logits.
+            </p>
+            <pre><code>from torch import nn
+
+class NeuralNetwork(nn.Module):
+    def __init__(self):
+        super(NeuralNetwork, self).__init__()
+        self.flatten = nn.Flatten()
+        self.linear_relu_stack = nn.Sequential(
+            nn.Linear(28 * 28, 512),
+            nn.ReLU(),
+            nn.Linear(512, 512),
+            nn.ReLU(),
+            nn.Linear(512, 10),
+        )
+
+    def forward(self, x):
+        x = self.flatten(x)
+        logits = self.linear_relu_stack(x)
+        return logits</code></pre>
+          </article>
+
+          <article class="lab-panel" role="tabpanel" tabindex="0" id="panel-train" aria-labelledby="tab-train" hidden>
+            <h3>Optimize model parameters</h3>
+            <p>
+              Cross-entropy loss and stochastic gradient descent power the
+              training loop, with accuracy checked after each epoch.
+            </p>
+            <pre><code>loss_fn = nn.CrossEntropyLoss()
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
+
+def train(dataloader, model, loss_fn, optimizer):
+    size = len(dataloader.dataset)
+    model.train()
+    for batch, (X, y) in enumerate(dataloader):
+        X, y = X.to(device), y.to(device)
+        pred = model(X)
+        loss = loss_fn(pred, y)
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        if batch % 100 == 0:
+            current = batch * len(X)
+            print(f"loss: {loss.item():&gt;7f} [{current:&gt;5d}/{size:&gt;5d}]")</code></pre>
+          </article>
+
+          <article class="lab-panel" role="tabpanel" tabindex="0" id="panel-predict" aria-labelledby="tab-predict" hidden>
+            <h3>Save, load, and predict</h3>
+            <p>
+              After training, the notebook saves model weights, reloads the
+              state dictionary, and maps the highest logit to a class label.
+            </p>
+            <pre><code>torch.save(model.state_dict(), "model.pth")
+
+model = NeuralNetwork()
+model.load_state_dict(torch.load("model.pth"))
+
+classes = [
+    "T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
+    "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot",
+]
+
+model.eval()
+x, y = test_data[0][0], test_data[0][1]
+with torch.no_grad():
+    pred = model(x)
+    predicted = classes[pred[0].argmax(0)]
+    actual = classes[y]
+    print(f'Predicted: "{predicted}", Actual: "{actual}"')</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="setup-section" id="setup" aria-labelledby="setup-title">
+        <div class="section-heading">
+          <p class="eyebrow">Environment</p>
+          <h2 id="setup-title">Run the workshop on CARC systems</h2>
+        </div>
+        <div class="setup-grid">
+          <article class="setup-block">
+            <h3>Request a GPU session</h3>
+            <pre><code>salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00</code></pre>
+          </article>
+          <article class="setup-block">
+            <h3>Bootcamp reservation option</h3>
+            <pre><code>salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --reservation=bootcamp --account=hpcsuppt_613</code></pre>
+          </article>
+          <article class="setup-block wide">
+            <h3>Create the PyTorch environment</h3>
+            <pre><code>module purge
+module load conda
+git clone https://github.com/uschpc/Building-NeuralNetworks.git
+cd Building-NeuralNetworks
+python carc_conda_setup.py
+pip uninstall torch torchvision torchaudio -y
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="materials-section" id="materials" aria-labelledby="materials-title">
+        <div class="section-heading">
+          <p class="eyebrow">Downloads</p>
+          <h2 id="materials-title">Workshop materials</h2>
+        </div>
+        <div class="github-materials" aria-label="Workshop repository materials">
+          <div class="repo-header">
+            <div>
+              <p class="repo-path">uschpc / Building-NeuralNetworks</p>
+              <h3>Workshop asset browser</h3>
+            </div>
+            <a class="repo-button" href="https://github.com/uschpc/Building-NeuralNetworks">Source repo</a>
+          </div>
+
+          <div class="repo-file-list" aria-label="Material files">
+            <a class="repo-file" href="decks/building-neural-networks.html">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 5h16M4 12h16M4 19h10" />
+              </svg>
+              <span>
+                <strong>Slide deck page</strong>
+                <small>Fixed slide viewer for the workshop deck</small>
+              </span>
+              <em>HTML</em>
+            </a>
+            <a class="repo-file" href="assets/materials/building-neural-networks-workshop.pdf">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M14 2H6v20h12V6zM14 2v4h4" />
+              </svg>
+              <span>
+                <strong>building-neural-networks-workshop.pdf</strong>
+                <small>Printable slide deck</small>
+              </span>
+              <em>2.0 MB</em>
+            </a>
+            <a class="repo-file" href="assets/materials/building-neural-networks-workshop.pptx">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" />
+              </svg>
+              <span>
+                <strong>building-neural-networks-workshop.pptx</strong>
+                <small>Editable PowerPoint source</small>
+              </span>
+              <em>6.9 MB</em>
+            </a>
+            <a class="repo-file" href="assets/materials/ANN.ipynb">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M8 4h8l4 4v12H4V4h4Zm8 0v5h4" />
+              </svg>
+              <span>
+                <strong>ANN.ipynb</strong>
+                <small>Fashion-MNIST PyTorch notebook</small>
+              </span>
+              <em>15 KB</em>
+            </a>
+            <a class="repo-file" href="assets/materials/carc_conda_setup.py">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="m8 18-4-6 4-6M16 6l4 6-4 6M14 4l-4 16" />
+              </svg>
+              <span>
+                <strong>carc_conda_setup.py</strong>
+                <small>CARC conda environment setup script</small>
+              </span>
+              <em>14 KB</em>
+            </a>
+          </div>
+
+          <article class="script-viewer" aria-labelledby="script-viewer-title">
+            <div class="script-viewer-header">
+              <div>
+                <p class="repo-path">assets/materials</p>
+                <h3 id="script-viewer-title">carc_conda_setup.py</h3>
+              </div>
+              <a class="repo-button" href="assets/materials/carc_conda_setup.py">Download</a>
+            </div>
+            <pre class="script-code"><code data-script-preview data-script-src="assets/materials/carc_conda_setup.py">Loading script preview...</code></pre>
+          </article>
+        </div>
+        <p class="source-note">
+          Adapted from the public workshop repository
+          <a href="https://github.com/uschpc/Building-NeuralNetworks">uschpc/Building-NeuralNetworks</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Building Neural Networks for Deep Learning Applications</p>
+      <p>USC Center for Advanced Research Computing</p>
+    </footer>
+
+    <script src="assets/site.js?v=20260828f"></script>
+  </body>
+</html>
